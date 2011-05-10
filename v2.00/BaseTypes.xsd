@@ -258,10 +258,14 @@
   				<xs:documentation>Voided</xs:documentation>
   			</xs:annotation>
   		</xs:enumeration>
+<<<<<<< HEAD
   		<xs:enumeration value="DELETED">
   			<xs:annotation>
   				<xs:documentation>Deleted</xs:documentation>
   			</xs:annotation></xs:enumeration>
+=======
+  		<xs:enumeration value="DELETED"></xs:enumeration>
+>>>>>>> 0cc40f20ad094a97e66aa7ac35996844d02eeee3
   	</xs:restriction>
   </xs:simpleType>
 
