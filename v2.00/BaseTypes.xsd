@@ -239,16 +239,29 @@
     
   <!-- Manual Journal Status Enumeration-->
   <xs:simpleType name="manualJournalStatus">
-    <xs:annotation>
-      <xs:documentation>Manual Journal Type</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="DRAFT"><xs:annotation><xs:documentation>Draft</xs:documentation></xs:annotation></xs:enumeration>
-      <xs:enumeration value="POSTED"><xs:annotation><xs:documentation>Posted</xs:documentation></xs:annotation></xs:enumeration>
-      <xs:enumeration value="VOIDED"><xs:annotation><xs:documentation>Voided</xs:documentation></xs:annotation></xs:enumeration>
-    </xs:restriction>
+  	<xs:annotation>
+  		<xs:documentation>Manual Journal Type</xs:documentation>
+  	</xs:annotation>
+  	<xs:restriction base="xs:token">
+  		<xs:enumeration value="DRAFT">
+  			<xs:annotation>
+  				<xs:documentation>Draft</xs:documentation>
+  			</xs:annotation>
+  		</xs:enumeration>
+  		<xs:enumeration value="POSTED">
+  			<xs:annotation>
+  				<xs:documentation>Posted</xs:documentation>
+  			</xs:annotation>
+  		</xs:enumeration>
+  		<xs:enumeration value="VOIDED">
+  			<xs:annotation>
+  				<xs:documentation>Voided</xs:documentation>
+  			</xs:annotation>
+  		</xs:enumeration>
+  		<xs:enumeration value="DELETED"></xs:enumeration>
+  	</xs:restriction>
   </xs:simpleType>
-  
+
   <!-- Currency Rate Usage -->
   <xs:simpleType name="currencyRateUsage">
     <xs:restriction base="xs:token">
