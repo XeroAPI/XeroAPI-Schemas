@@ -6,6 +6,9 @@
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="Account.xsd" />
   <xs:include schemaLocation="Invoice.xsd" />
+  <xs:include schemaLocation="Contact.xsd" />
+  <xs:include schemaLocation="LineItem.xsd" />
+  <xs:include schemaLocation="CreditNote.xsd" />
 
   <!-- Payment against an invoice -->
   <xs:complexType name="Payment">
