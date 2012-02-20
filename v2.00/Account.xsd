@@ -28,6 +28,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="Class" type="accountClass" />
           <xs:element minOccurs="0" maxOccurs="1" name="SystemAccount" type="accountSystemCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="EnablePaymentsToAccount" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ShowInExpenseClaims" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="BankAccountNumber" type="bankAccountNumber" />
           <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="ReportingCode" type="xs:string" />
