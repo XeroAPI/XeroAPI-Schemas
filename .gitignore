@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-.project
-=======
 *resharper.user
 # Visual Studio
 [Dd]ebug/
@@ -13,8 +9,4 @@
 # Resharper
 *[Rr]e[Ss]harper.user
 _ReSharper.*/
->>>>>>> d1b1c675e26b4ddc8cd70f14b691fe1e788f427f
-
-.gitignore
-
-.gitignore
+.project
