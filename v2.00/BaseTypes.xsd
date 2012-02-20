@@ -239,41 +239,6 @@
     </xs:restriction>
   </xs:simpleType>
     
-<<<<<<< HEAD
-  <!-- Manual Journal Status Enumeration-->
-  <xs:simpleType name="manualJournalStatus">
-  	<xs:annotation>
-  		<xs:documentation>Manual Journal Type</xs:documentation>
-  	</xs:annotation>
-  	<xs:restriction base="xs:token">
-  		<xs:enumeration value="DRAFT">
-  			<xs:annotation>
-  				<xs:documentation>Draft</xs:documentation>
-  			</xs:annotation>
-  		</xs:enumeration>
-  		<xs:enumeration value="POSTED">
-  			<xs:annotation>
-  				<xs:documentation>Posted</xs:documentation>
-  			</xs:annotation>
-  		</xs:enumeration>
-  		<xs:enumeration value="VOIDED">
-  			<xs:annotation>
-  				<xs:documentation>Voided</xs:documentation>
-  			</xs:annotation>
-  		</xs:enumeration>
-  		<xs:enumeration value="DELETED">
-  			<xs:annotation>
-  				<xs:documentation>Deleted</xs:documentation>
-<<<<<<< HEAD
-  			</xs:annotation></xs:enumeration>
-=======
-  			</xs:annotation>
-  		</xs:enumeration>
->>>>>>> DELETED status added to manualJournalStatus - minor layout alt
-  	</xs:restriction>
-  </xs:simpleType>
-
-=======
   <!-- Document types for 'CreditNote' endpoint -->
   <xs:simpleType name="creditNoteType">
     <xs:annotation>
@@ -319,7 +284,6 @@
   	</xs:restriction> 
   </xs:simpleType>
   
->>>>>>> d1b1c675e26b4ddc8cd70f14b691fe1e788f427f
   <!-- Currency Rate Usage -->
   <xs:simpleType name="currencyRateUsage">
     <xs:restriction base="xs:token">
