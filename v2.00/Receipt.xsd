@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Receipt"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="User.xsd" />
+  <xs:include schemaLocation="Contact.xsd" />
+  <xs:include schemaLocation="LineItem.xsd" />
+  <xs:include schemaLocation="Attachment.xsd" />
+
+  <xs:element name="Receipts" type="ArrayOfReceipt" />
+
+  <!-- 
+  ArrayOfReceipt
+  -->
+  <xs:complexType name="ArrayOfReceipt">
+    <xs:sequence>
+      <xs:element name="Receipt" minOccurs="0" maxOccurs="unbounded" type="Receipt" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 
+  Receipt 
+  -->
+  <xs:complexType name="Receipt">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          
+          <xs:element name="ReceiptID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+          <xs:element name="ReceiptNumber" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="Status" minOccurs="0" maxOccurs="1" type="receiptStatus" />
+
+          <xs:element name="Url" minOccurs="0" maxOccurs="1" type="xs:anyURI" />
+          <xs:element name="ExternalLinkProviderName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          
+          <xs:element name="User" minOccurs="0" maxOccurs="1" type="User" />
+          <xs:element name="Contact" minOccurs="0" maxOccurs="1" type="Contact" />
+          <xs:element name="Date" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+          <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+
+          <xs:element name="LineAmountTypes" minOccurs="0" maxOccurs="1" type="lineAmountType" />
+          <xs:element name="LineItems" minOccurs="0" maxOccurs="1" type="ArrayOfLineItem" />
+          
+          <xs:element minOccurs="1" maxOccurs="1" name="SubTotal" type="itemPrice" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TotalTax" type="itemPrice" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Total" type="itemPrice" />
+          
+          <xs:element name="HasAttachments" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="Attachments" minOccurs="0" maxOccurs="1" type="ArrayOfAttachment" />
+          
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+</xs:schema>

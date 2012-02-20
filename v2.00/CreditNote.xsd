@@ -34,10 +34,15 @@
           <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="FullyPaidOnDate" nillable="true" type="xs:dateTime" />
 
-          <xs:element minOccurs="0" maxOccurs="1" name="Type" type="invoiceType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Type" type="creditNoteType" />
           <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
           <xs:element minOccurs="1" maxOccurs="1" name="CreditNoteID" type="uniqueIdentifier" />
           <xs:element minOccurs="0" maxOccurs="1" name="CreditNoteNumber" type="xs:string" />
+          
+          <xs:element minOccurs="0" maxOccurs="1" name="SentToContact" type="trueOrFalse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AppliedAmount" type="itemPrice" />
+
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

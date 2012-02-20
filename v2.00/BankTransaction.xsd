@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BankTransaction"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="Contact.xsd" />
+  <xs:include schemaLocation="Account.xsd" />
+  <xs:include schemaLocation="LineItem.xsd" />
+  
+  <xs:element name="BankTransactions" type="ArrayOfBankTransaction" />
+
+  <!-- Bank Transactions -->
+  <xs:complexType name="ArrayOfBankTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankTransaction" nillable="true" type="BankTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Bank Transaction (Spend Money or Receice Money) -->
+  <xs:complexType name="BankTransaction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Contact" type="Contact" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Status" type="bankTransactionStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LineAmountTypes" type="lineAmountType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LineItems" type="ArrayOfLineItem" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SubTotal" type="itemPrice" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TotalTax" type="itemPrice" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Total" type="itemPrice" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UpdatedDateUTC" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BankTransactionID" type="uniqueIdentifier" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BankAccount" type="Account" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Type" type="bankTransactionType" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsReconciled" type="trueOrFalse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+</xs:schema>

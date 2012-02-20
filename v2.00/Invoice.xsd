@@ -33,7 +33,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="SubTotal" nillable="true" type="itemPrice" />
           <xs:element minOccurs="1" maxOccurs="1" name="TotalTax" nillable="true" type="itemPrice" />
           <xs:element minOccurs="1" maxOccurs="1" name="Total" nillable="true" type="itemPrice" />
-          <xs:element minOccurs="1" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
           <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="FullyPaidOnDate" nillable="true" type="xs:dateTime" />
 
@@ -48,8 +48,13 @@
           <xs:element minOccurs="0" maxOccurs="1" name="AmountPaid" type="itemPrice" />
           <xs:element minOccurs="0" maxOccurs="1" name="AmountCredited" type="itemPrice" />
 
-          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:anyURI" />
           <xs:element minOccurs="0" maxOccurs="1" name="ExternalLinkProviderName" type="xs:string" />
+          
+          <!-- This is never 'false', it's just not there. -->
+          <xs:element minOccurs="0" maxOccurs="1" name="SentToContact" type="xs:boolean" />
+          
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

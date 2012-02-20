@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Attachment"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+
+  <xs:element name="Attachments" type="ArrayOfAttachment" />
+
+  <!-- Attachments -->
+  <xs:complexType name="ArrayOfAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" nillable="true" type="Attachment" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Attachment -->
+  <xs:complexType name="Attachment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="AttachmentID" type="uniqueIdentifier" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FileName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:anyURI" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MimeType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+</xs:schema>

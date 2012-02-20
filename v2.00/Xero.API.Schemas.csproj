@@ -60,6 +60,12 @@
     <None Include="Account.xsd" />
     <None Include="Address.xsd" />
     <None Include="ApiException.xsd" />
+    <None Include="Attachment.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BankTransaction.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="BaseTypes.xsd" />
     <None Include="BrandingTheme.xsd" />
     <None Include="Contact.xsd" />
@@ -70,6 +76,9 @@
     <None Include="Currency.xsd" />
     <None Include="CurrencyCode.xsd" />
     <None Include="Employee.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExpenseClaim.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Invoice.xsd" />
@@ -83,12 +92,18 @@
     </None>
     <None Include="Organisation.xsd" />
     <None Include="Payment.xsd" />
+    <None Include="Receipt.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Report.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Response.xsd" />
     <None Include="TaxRate.xsd" />
     <None Include="Tracking.xsd" />
+    <None Include="User.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

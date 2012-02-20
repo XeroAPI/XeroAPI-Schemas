@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExpenseClaim"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="User.xsd" />
+  <xs:include schemaLocation="Receipt.xsd" />
+
+  <xs:element name="ExpenseClaims" type="ArrayOfExpenseClaim" />
+
+  <!-- 
+  ArrayOfExpenseClaim
+  -->
+  <xs:complexType name="ArrayOfExpenseClaim">
+    <xs:sequence>
+      <xs:element name="ExpenseClaim" minOccurs="0" maxOccurs="unbounded" type="ExpenseClaim" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 
+  ExpenseClaim 
+  -->
+  <xs:complexType name="ExpenseClaim">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element name="ExpenseClaimID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+          <xs:element name="Status" minOccurs="0" maxOccurs="1" type="expenseClaimStatus" />
+          <xs:element name="Date" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+          <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+          <xs:element name="User" minOccurs="0" maxOccurs="1" type="User" />
+          <xs:element name="Receipts" minOccurs="0" maxOccurs="1" type="ArrayOfReceipt" />
+          <xs:element name="Total" minOccurs="0" maxOccurs="1" type="itemPrice" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+</xs:schema>

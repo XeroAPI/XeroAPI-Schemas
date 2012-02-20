@@ -26,6 +26,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToRevenue" type="xs:boolean" />
           <xs:element minOccurs="1" maxOccurs="1" name="DisplayTaxRate" nillable="true" type="taxRate" />
           <xs:element minOccurs="1" maxOccurs="1" name="EffectiveRate" nillable="true" type="taxRate" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Status" type="taxRateStatus" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

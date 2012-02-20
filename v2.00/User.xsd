@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="User"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+
+  <xs:element name="Users" type="ArrayOfUser" />
+
+  <!-- 
+  ArrayOfUser
+  -->
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element name="User" minOccurs="0" maxOccurs="unbounded" type="User" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 
+  User 
+  -->
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element name="UserCID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+          <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="LastName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+          <xs:element name="IsSubscriber" minOccurs="0" maxOccurs="1" type="trueOrFalse" />
+          <xs:element name="OrganisationRole" minOccurs="0" maxOccurs="1" type="organisationRole" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+</xs:schema>

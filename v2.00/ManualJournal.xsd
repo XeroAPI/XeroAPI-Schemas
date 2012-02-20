@@ -20,10 +20,10 @@
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
         <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="1" name="Date" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Date" type="xs:dateTime" />
           <xs:element minOccurs="0" maxOccurs="1" name="Status" type="manualJournalStatus" />
           <xs:element minOccurs="0" maxOccurs="1" name="LineAmountTypes" type="lineAmountType" />
-          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" type="xs:dateTime" />
           <xs:element minOccurs="0" maxOccurs="1" name="ManualJournalID" type="uniqueIdentifier" />
           <xs:element minOccurs="0" maxOccurs="1" name="Narration" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="JournalLines" type="ArrayOfManualJournalLine" />
