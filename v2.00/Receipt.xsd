@@ -23,6 +23,7 @@
   <!-- 
   Receipt 
   -->
+  <xs:element name="Receipt" type="Receipt" />
   <xs:complexType name="Receipt">
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
