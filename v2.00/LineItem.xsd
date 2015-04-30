@@ -22,12 +22,12 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
       <xs:element minOccurs="1" maxOccurs="1" name="UnitAmount" nillable="true" type="itemPrice" />
       <xs:element minOccurs="0" maxOccurs="1" name="TaxType" type="taxType" />
-      <xs:element minOccurs="1" maxOccurs="1" name="TaxAmount" nillable="true" type="itemPrice" />
-      <xs:element minOccurs="1" maxOccurs="1" name="LineAmount" nillable="true" type="itemPrice" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxAmount" type="itemPrice" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LineAmount" type="itemPrice" />
       <xs:element minOccurs="0" maxOccurs="1" name="AccountCode" type="accountCode" />
       <xs:element minOccurs="0" maxOccurs="1" name="Tracking" type="ArrayOfTrackingCategory" />
       <xs:element minOccurs="0" maxOccurs="1" name="ItemCode" type="xs:string" />
-      <xs:element minOccurs="1" maxOccurs="1" name="Quantity" nillable="true" type="itemQuantity" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Quantity" type="itemQuantity" />
       <xs:element minOccurs="0" maxOccurs="1" name="DiscountRate" type="itemPrice" />
 
     </xs:all>
