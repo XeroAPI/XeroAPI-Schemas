@@ -6,6 +6,9 @@
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="Account.xsd" />
   <xs:include schemaLocation="Invoice.xsd" />
+  <xs:include schemaLocation="Contact.xsd" />
+  <xs:include schemaLocation="LineItem.xsd" />
+  <xs:include schemaLocation="CreditNote.xsd" />
 
   <xs:element name="Payments" nillable="true" type="ArrayOfPayment" />
   <xs:element name="Payment" type="Payment" />
